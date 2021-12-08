@@ -114,3 +114,8 @@ optional arguments:
   -t, --testing         Test this tool with a trivial example.
   -v, --verbose         Verbosity. Default is False.
 ```
+
+
+## TODO
+
+Package this script to install it with `pip install`
