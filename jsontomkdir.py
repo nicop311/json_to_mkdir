@@ -205,6 +205,8 @@ def main():
           
         * Test the tool to see if it works in your environment:
           $ ./jsontodir.py -t
+Testing with trivial example. -j and -d are omitted
+Your directory is created here: /tmp/jsontodir_2021-12-08_11-49-20 .
           
           
         Add verbosity with -v.
