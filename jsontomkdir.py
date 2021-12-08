@@ -198,15 +198,40 @@ def main():
         Usage:
         
         * JSON file as input:
-          $ ./jsontodir.py -j /tmp/toDelete/tree.json -d /tmp/myDir
+          $ ./jsontomkdir.py -j /tmp/toDelete/tree.json -d /tmp/myDir
           
         * JSON string as input:
-          $ ./jsontodir.py -js  '[{"type":"directory","name":"root_dir","contents":[{"type":"directory","name":"subdir","contents":[]}]},{"type":"report","directories":1}]'   -d /tmp/lolol
+          ```
+          $ ./jsontomkdir.py -js  '[{"type":"directory","name":"root_dir","contents":[{"type":"directory","name":"subdir","contents":[]}]},{"type":"report","directories":1}]'   -d /tmp/lolol
+          Your directory is created here: /tmp/lolol .
+          ```
+          
+          ```
+          $ tree /tmp/lolol
+          /tmp/lolol
+          └── root_dir
+              └── subdir
+          ```
           
         * Test the tool to see if it works in your environment:
-          $ ./jsontodir.py -t
-Testing with trivial example. -j and -d are omitted
-Your directory is created here: /tmp/jsontodir_2021-12-08_11-49-20 .
+          ```
+          $ ./jsontomkdir.py -t
+          Testing with trivial example. -j and -d are omitted
+          Your directory is created here: /tmp/jsontodir_2021-12-08_11-49-20 .
+          ```
+          ```
+          $ tree /tmp/jsontodir_2021-12-08_11-49-20
+          /tmp/jsontodir_2021-12-08_11-49-20
+          └── root_dir
+              ├── subedir1_level1
+              │   └── subedir11_level2
+              │       ├── subedir111_level3
+              │       ├── subedir112_level3
+              │       └── subedir113_level3
+              └── subedir2_level1
+                  └── subedir21_level2
+                      └── subedir211_level3
+          ```
           
           
         Add verbosity with -v.
@@ -263,4 +288,3 @@ Your directory is created here: /tmp/jsontodir_2021-12-08_11-49-20 .
     
 if __name__=="__main__":
     main()
-
