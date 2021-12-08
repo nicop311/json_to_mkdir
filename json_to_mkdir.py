@@ -211,7 +211,10 @@ def main():
         """
     
     
-    parser = argparse.ArgumentParser(description = usage)
+    parser = argparse.ArgumentParser(
+                          description = usage,
+                          formatter_class=argparse.RawTextHelpFormatter
+                          )
 
     parser.add_argument("-j", "--jsonfileinput",
                         help="A JSON file following the format returned by "
@@ -233,7 +236,7 @@ def main():
                         required=False)
     
     parser.add_argument("-v","--verbose",
-                        help="Verbosity."
+                        help="Verbosity. "
                         "Default is False.",
                         action='store_true',
                         default=False)
@@ -258,3 +261,4 @@ def main():
     
 if __name__=="__main__":
     main()
+
