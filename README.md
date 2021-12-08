@@ -3,6 +3,13 @@ Create a directory structure out of the JSON output which use the same format as
 
 ## Usage
 
+Try it: 
+
+```
+./jsontomkdir.py -j dir.json                  
+Your directory is created here: jsontomkdir_2021-12-08_15-39-38.
+```
+
 Convert this JSON string or file (follwing the format of the bash command `$ tree -Jd`):
 
 ```json
