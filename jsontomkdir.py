@@ -255,7 +255,7 @@ def main():
 
     parser.add_argument("-d", "--directorypath",
                         help="TODO écrire description",
-                        default="jsontodir_{}".format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S")),
+                        default="jsontomkdir_{}".format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S")),
                         required=False)
     
     parser.add_argument("-t", "--testing",
