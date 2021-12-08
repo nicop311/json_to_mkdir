@@ -34,7 +34,7 @@ jsonstring = \
 
 
 def jsonstring_to_dir(inputjsonstring=jsonstring,
-                      outputdir="/tmp/jsontodir_" 
+                      outputdir="/tmp/jsontomkdir_" 
                       + datetime.now().strftime("%Y-%m-%d_%H-%M-%S"),
                       verbose=False):
     """Creates ($ mkdir) a linux directory structure out of a JSON string input.
@@ -110,7 +110,7 @@ def jsonstring_to_dir(inputjsonstring=jsonstring,
 
 
 def json_to_dir(jsonfile,
-                outputdir="/tmp/jsontodir_" 
+                outputdir="/tmp/jsontomkdir_" 
                 + datetime.now().strftime("%Y-%m-%d_%H-%M-%S"),
                 verbose=False):
     """Takes a JSON file (obtained with $ tree -Jd) and creates directories.
@@ -217,11 +217,11 @@ def main():
           ```
           $ ./jsontomkdir.py -t
           Testing with trivial example. -j and -d are omitted
-          Your directory is created here: /tmp/jsontodir_2021-12-08_11-49-20 .
+          Your directory is created here: /tmp/jsontomkdir_2021-12-08_11-49-20 .
           ```
           ```
-          $ tree /tmp/jsontodir_2021-12-08_11-49-20
-          /tmp/jsontodir_2021-12-08_11-49-20
+          $ tree /tmp/jsontomkdir_2021-12-08_11-49-20
+          /tmp/jsontomkdir_2021-12-08_11-49-20
           └── root_dir
               ├── subedir1_level1
               │   └── subedir11_level2
@@ -255,6 +255,7 @@ def main():
 
     parser.add_argument("-d", "--directorypath",
                         help="TODO écrire description",
+                        default="jsontodir_{}".format(datetime.now().strftime("%Y-%m-%d_%H-%M-%S")),
                         required=False)
     
     parser.add_argument("-t", "--testing",
