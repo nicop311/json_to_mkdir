@@ -1,0 +1,21 @@
+[
+  {"type":"directory","name":"root_dir","contents":[
+    {"type":"directory","name":"subedir1_level1","contents":[
+      {"type":"directory","name":"subedir11_level2","contents":[
+        {"type":"directory","name":"subedir111_level3","contents":[
+        ]},
+        {"type":"directory","name":"subedir112_level3","contents":[
+        ]},
+        {"type":"directory","name":"subedir113_level3","contents":[
+        ]}
+      ]}
+    ]},
+    {"type":"directory","name":"subedir2_level1","contents":[
+      {"type":"directory","name":"subedir21_level2","contents":[
+        {"type":"directory","name":"subedir211_level3","contents":[
+        ]}
+      ]}
+    ]}
+  ]},
+  {"type":"report","directories":8}
+]
